@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+</head>
+<body>
+
+  <h1>Simple Calculator</h1>
+  <form name="calculator">
+    <input type="text" name="display" id="display" disabled />
+    <br>
+    <button type="button" onclick="clearDisplay()">C</button>
+    <button type="button" onclick="appendToDisplay('1')">1</button>
+    <button type="button" onclick="appendToDisplay('2')">2</button>
+    <button type="button" onclick="appendToDisplay('+')">+</button>
+    <br>
+    <!-- Add more buttons here -->
+    <button type="button" onclick="calculate()">=</button>
+  </form>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
