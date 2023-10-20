@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Calculator</title>
+  <title>The Rex & Harrison SCDD Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>Badass Calculator</h1>
-  <form name="calculator">
-    <input type="text" name="display" id="display" disabled />
-    <br>
-    <button type="button" onclick="clearDisplay()">C</button>
-    <button type="button" onclick="appendToDisplay('1')">1</button>
-    <button type="button" onclick="appendToDisplay('2')">2</button>
-    <button type="button" onclick="appendToDisplay('+')">+</button>
-    <br>
-    <!-- Add more buttons here -->
-    <button type="button" onclick="calculate()">=</button>
-  </form>
+<div class="calculator">
+  <h1>The Rex & Harrison SCDD Calculator</h1>
 
-  <script src="calculator.js"></script>
+  <div class="input-group">
+    <label>Type of Surgery</label>
+    <button class="button">THA</button>
+    <button class="button">TKA</button>
+  </div>
+
+  <!-- Repeat similar structure for other inputs, like ASA, CCI, etc. -->
+
+  <div class="input-group">
+    <label>Recommendation</label>
+    <div class="percentage">Inpatient 34%</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
