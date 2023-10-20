@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.calculator {
+  max-width: 600px;
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.input-group {
+  margin: 20px 0;
+}
+
+.button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.percentage {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 20px;
+}
