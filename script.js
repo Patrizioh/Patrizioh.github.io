@@ -1,16 +1,17 @@
+// Update output when any slider moves
+document.querySelectorAll('input[type="range"]').forEach(function(slider) {
+    slider.addEventListener('input', function(e) {
+        let outputId = e.target.id + "Output";
+        document.getElementById(outputId).value = e.target.value;
+    });
+});
+
 document.getElementById('calculate').addEventListener('click', function() {
-    // Get values from each input
-    let intercept = parseFloat(document.getElementById('intercept').value);
-    // Repeat for other inputs, like:
-    // let previousJointReplacement = parseFloat(document.getElementById('previousJointReplacement').value);
-    // ...
-
-    // Calculate the result using the formula
-    let result = intercept; 
-    // Add the multiplication for other inputs, like:
-    // result += previousJointReplacement * 0.042377;
-    // ...
-
-    // Display the result
+    let result = 0;
+    document.querySelectorAll('input[type="range"]').forEach(function(slider) {
+        let value = parseFloat(slider.value);
+        let coeff = parseFloat(slider.getAttribute('data-coeff'));
+        result += value * coeff;
+    });
     document.getElementById('result').textContent = result.toFixed(2);
 });
