@@ -58,6 +58,30 @@ form {
     color: #3498db;
     font-weight: bold;
 }
+/* Result Box */
+.result-box, .recommendation-box {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result-box h2, .recommendation-box h2 {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+#result, #recommendation {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #3498db;
+    font-weight: bold;
+}
 
 /* Animations */
 @keyframes fadeIn {
