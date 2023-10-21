@@ -1,87 +1,61 @@
-body, h1, h2, h3, p, div {
-    margin: 0;
-    padding: 0;
-}
+/* Existing Styles */
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f6f9;
-    color: #333;
-    padding: 50px;
-    overflow-x: hidden;
+    font-family: Arial, sans-serif;
 }
 
 .header {
-    background-color: #007BFF;
-    padding: 20px;
+    background-color: #2196F3;
     color: white;
     text-align: center;
-    border-radius: 5px 5px 0 0;
+    padding: 1em 0;
+    margin-bottom: 2em;
 }
 
 .calculator {
-    max-width: 400px;
-    background-color: #ffffff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    margin: auto;
-    animation: fadeIn 1.5s;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    width: 400px;
+    margin: 0 auto;
 }
 
 .button-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
 .button-group button {
-    padding: 10px;
+    padding: 0.5em 1em;
+    margin: 0 0.5em; /* Change this to reduce space between buttons */
+    background-color: #e7e7e7;
     border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    background-color: #667eea;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 .button-group button.active {
-    background-color: #2d3186;
-    transform: scale(1.05);
+    background-color: #2196F3;
+    color: white;
 }
 
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
+.content {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center; /* Centering the subtitles */
+}
+
+/* New styles to adjust the text box widths */
+
+#bmiInput, #ageInput {
+    width: 70%; /* Adjusting the width of the text boxes */
+    padding: 0.5em;
+    margin: 0.5em 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-button#calculate {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #48bb78;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button#calculate:hover {
-    background-color: #2f855a;
+    border-radius: 3px;
 }
 
 #result {
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 1em;
     font-weight: bold;
-    color: #2d3748;
 }
