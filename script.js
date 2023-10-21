@@ -9,7 +9,7 @@ function calculate() {
     // Coefficients
     const coefficients = {
         intercept: 2.492513,
-        previousJointReplacement: [0, 0.042377, 0.117596, 0.211251, 0.415966], // For None, THA, TKA, Hemi, Revision respectively
+        previousJointReplacement: [0, 1, 2, 3, 4], // For None, THA, TKA, Hemi, Revision respectively
         bodyMassIndex: 0.03, // Example coefficient, adjust as necessary
         diabetes: 0.2, // Example coefficient, adjust as necessary
         sex: 0.1, // Example coefficient, adjust as necessary
