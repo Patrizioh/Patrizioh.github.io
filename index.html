@@ -2,42 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCCD Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <title>SCCD Calculator</title>
 </head>
 <body>
-    <div class="calculator">
-        <label for="previousJointReplacement">Previous Joint Replacement:</label>
-        <select id="previousJointReplacement">
-            <option value="0">None</option>
-            <option value="1">THA</option>
-            <option value="2">TKA</option>
-            <option value="3">THA & TKA</option>
-            <option value="4">TSA</option>
-        </select>
-        
-        <label for="bodyMassIndex">Body Mass Index:</label>
-        <input type="number" id="bodyMassIndex" placeholder="Enter BMI">
 
-        <label for="diabetes">Diabetes:</label>
-        <select id="diabetes">
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-        </select>
+<div class="header">
+    <h1>SCCD Probability Calculator</h1>
+</div>
 
-        <label for="sex">Sex:</label>
-        <select id="sex">
-            <option value="0">Male</option>
-            <option value="1">Female</option>
-        </select>
+<div class="calculator">
+    <div class="content">
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" placeholder="Enter Age">
-        
-        <button onclick="calculate()">Calculate</button>
-        <div id="result">Probability of SCCD: <span></span></div>
+        <!-- Previous Joint Replacement section -->
+        <h3>Previous Joint Replacement:</h3>
+        <div class="button-group" id="jointGroup">
+            <button onclick="setJoint('None')">None</button>
+            <button onclick="setJoint('THR')">THR</button>
+            <button onclick="setJoint('TKA')">TKA</button>
+        </div>
+
+        <!-- Body Mass Index section -->
+        <h3>Body Mass Index:</h3>
+        <input type="number" id="bmiInput" onchange="calculateProbability()">
+
+        <!-- Diabetes section -->
+        <h3>Diabetes:</h3>
+        <div class="button-group" id="diabetesGroup">
+            <button onclick="setDiabetes('No')">No</button>
+            <button onclick="setDiabetes('Yes')">Yes</button>
+        </div>
+
+        <!-- Sex section -->
+        <h3>Sex:</h3>
+        <div class="button-group" id="sexGroup">
+            <button onclick="setSex('Male')">Male</button>
+            <button onclick="setSex('Female')">Female</button>
+        </div>
+
+        <!-- Age section -->
+        <h3>Age:</h3>
+        <input type="number" id="ageInput" onchange="calculateProbability()">
+
+        <!-- Result -->
+        <div id="result">
+            Probability of SCCD: <span id="probabilityOutput">0%</span>
+        </div>
     </div>
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
