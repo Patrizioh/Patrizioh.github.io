@@ -1,12 +1,12 @@
 const coefficients = {
-    intercept: 0,
-    procedureAge: 1,
-    CCI: 1,
-    sex: 1,
-    typeOfSurgery: 1,
-    ASAScore: 1,
-    exercise: 1,
-    numberOfStoriesInHome: 1
+    intercept: 2.495213,
+    procedureAge: -0.04224,
+    CCI: -0.20137,
+    sex: -0.3021,
+    typeOfSurgery: -0.32406,
+    ASAScore: -1.57505,
+    exercise: 1.906765,
+    numberOfStoriesInHome: 1.149678
 };
 
 const categoricalValues = {};
