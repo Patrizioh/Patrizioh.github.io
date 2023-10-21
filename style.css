@@ -12,8 +12,7 @@ h2.subtitle {
     color: darkgray;
 }
 
-/* Navigation and reset buttons */
-.nav-button, .reset-button {
+.nav-button {
     background-color: #8E44AD;
     border: none;
     color: white;
@@ -25,14 +24,8 @@ h2.subtitle {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
-    transition: background-color 0.3s ease;
 }
 
-.reset-button:hover, .nav-button:hover {
-    background-color: #6C3483;
-}
-
-/* Category buttons */
 .category button {
     background-color: lightgray;
     border: none;
@@ -45,7 +38,6 @@ h2.subtitle {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
-    transition: background-color 0.3s ease;
 }
 
 .category button.selected {
@@ -53,7 +45,6 @@ h2.subtitle {
     color: white;
 }
 
-/* Recommendations */
 #recommendation.surgery-center {
     color: green;
 }
@@ -61,6 +52,12 @@ h2.subtitle {
 #recommendation.hospital {
     color: red;
 }
+
+.reset-button {
+    background-color: #c0392b;
+}
+/* ... existing CSS ... */
+
 .nav-button {
     background-color: #8E44AD;
     border: none;
