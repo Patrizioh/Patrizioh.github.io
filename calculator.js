@@ -1,30 +1,17 @@
 // Coefficients for logistic regression
 const coefficients = {
-    intercept: 2.495213,
-    procedureAge: -0.04224,
-    CCI: -0.20137,
-    sex: -0.3021,
-    typeOfSurgery: -0.32406,
-    ASAScore: -1.57505,
-    exercise: 1.906765,
-    numberOfStoriesInHome: 1.149678,
-    firstFloorBedroom: 0.769372,
-    transportation: 0.713789,
-    hospitalOrERVisitsInPast1Year: -0.4485,
+    // Add your coefficients here
 };
 
 // Object to store categorical values
 const categoricalValues = {
-    sex: 0,
-    typeOfSurgery: 0,
-    exercise: 0,
-    numberOfStoriesInHome: 0,
-    transportation: 0,
+    // Add your categorical values here
 };
 
 // Function to set categorical values
 function setCategory(category, value) {
     categoricalValues[category] = value;
+    calculateLogisticRegression(); // Auto-calculate when a value changes
 }
 
 // Function to calculate logistic regression
@@ -52,3 +39,12 @@ function calculateLogisticRegression() {
     const resultElement = document.getElementById('result');
     resultElement.textContent = `Probability of Outcome: ${probability.toFixed(4)}`;
 }
+
+// Add event listeners to input fields to trigger auto-calculation
+const inputFields = document.querySelectorAll('input[type="number"]');
+inputFields.forEach((input) => {
+    input.addEventListener('input', calculateLogisticRegression);
+});
+
+// Initial calculation when the page loads
+calculateLogisticRegression();
