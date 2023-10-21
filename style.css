@@ -1,57 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    animation: fadeIn 1s ease-in-out;
-}
-
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    animation: slideIn 1s ease-in-out;
-    text-align: center;
+    width: 80%;
+    margin: auto;
 }
 
-h1, h2 {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
+h1 {
+    font-size: 2em;
 }
 
-form {
-    padding: 20px;
+h2.subtitle {
+    font-size: 1.2em;
+    color: darkgray;
+}
+
+.nav-button {
+    background-color: #8E44AD;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
 }
 
 .category button {
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: lightgray;
     border: none;
-    border-radius: 5px;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.category button:hover {
-    background-color: #2980b9;
+    border-radius: 12px;
 }
 
 .category button.selected {
-    background-color: #2980b9;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+    color: white;
 }
 
-#result, #recommendation {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #3498db;
-    font-weight: bold;
+#recommendation.surgery-center {
+    color: green;
+}
+
+#recommendation.hospital {
+    color: red;
+}
+
+.reset-button {
+    background-color: #c0392b;
 }
