@@ -15,27 +15,16 @@
     <h1>Logistic Regression Calculator</h1>
     
     <form id="logisticRegressionForm">
-        <!-- Previous Joint Replacement -->
-        <div class="category">
-            <p>Previous Joint Replacement:</p>
-            <button type="button" onclick="setCategory('previousJointReplacement', 0)">None</button>
-            <button type="button" onclick="setCategory('previousJointReplacement', 1)">THA</button>
-            <button type="button" onclick="setCategory('previousJointReplacement', 2)">TKA</button>
-            <button type="button" onclick="setCategory('previousJointReplacement', 3)">THA & TKA</button>
-            <button type="button" onclick="setCategory('previousJointReplacement', 4)">TSA</button>
-        </div>
-
-        <!-- Type of Surgery -->
-        <div class="category">
-            <p>Type of Surgery:</p>
-            <button type="button" onclick="setCategory('typeOfSurgery', 0)">THA</button>
-            <button type="button" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
-        </div>
-
         <!-- Procedure Age -->
         <div class="category">
             <p>Procedure Age:</p>
             <input type="number" step="0.01" id="procedureAge" required>
+        </div>
+
+        <!-- CCI -->
+        <div class="category">
+            <p>CCI:</p>
+            <input type="number" step="0.01" id="CCI" required>
         </div>
 
         <!-- Sex (Male or Female) -->
@@ -45,85 +34,17 @@
             <button type="button" onclick="setCategory('sex', 1)">Female</button>
         </div>
 
-        <!-- BMI -->
+        <!-- Type of Surgery -->
         <div class="category">
-            <p>BMI:</p>
-            <input type="number" step="0.01" id="BMI" required>
+            <p>Type of Surgery:</p>
+            <button type="button" onclick="setCategory('typeOfSurgery', 0)">THA</button>
+            <button type="button" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
         </div>
 
         <!-- ASA Score -->
         <div class="category">
             <p>ASA Score:</p>
             <input type="number" step="0.01" id="ASAScore" required>
-        </div>
-
-        <!-- CCI -->
-        <div class="category">
-            <p>CCI:</p>
-            <input type="number" step="0.01" id="CCI" required>
-        </div>
-
-        <!-- Race -->
-        <div class="category">
-            <p>Race:</p>
-            <button type="button" onclick="setCategory('race', 0)">White</button>
-            <button type="button" onclick="setCategory('race', 1)">Black</button>
-            <button type="button" onclick="setCategory('race', 2)">Asian</button>
-            <button type="button" onclick="setCategory('race', 3)">Pacific</button>
-            <button type="button" onclick="setCategory('race', 4)">Unreported</button>
-        </div>
-
-        <!-- Ethnicity -->
-        <div class="category">
-            <p>Ethnicity:</p>
-            <button type="button" onclick="setCategory('ethnicity', 0)">Non Hispanic or Latino</button>
-            <button type="button" onclick="setCategory('ethnicity', 1)">Hispanic or Latino</button>
-        </div>
-
-        <!-- Marital Status -->
-        <div class="category">
-            <p>Marital Status:</p>
-            <button type="button" onclick="setCategory('maritalStatus', 0)">Single</button>
-            <button type="button" onclick="setCategory('maritalStatus', 1)">Married</button>
-            <button type="button" onclick="setCategory('maritalStatus', 2)">Divorced</button>
-            <button type="button" onclick="setCategory('maritalStatus', 3)">Widowed</button>
-        </div>
-
-        <!-- Alcohol Use -->
-        <div class="category">
-            <p>Alcohol Use:</p>
-            <button type="button" onclick="setCategory('alcoholUse', 0)">No</button>
-            <button type="button" onclick="setCategory('alcoholUse', 1)">Yes</button>
-        </div>
-
-        <!-- Alcohol Intake -->
-        <div class="category">
-            <p>Alcohol Intake:</p>
-            <button type="button" onclick="setCategory('alcoholIntake', 0)">None</button>
-            <button type="button" onclick="setCategory('alcoholIntake', 1)">Occasional</button>
-            <button type="button" onclick="setCategory('alcoholIntake', 2)">Weekly</button>
-            <button type="button" onclick="setCategory('alcoholIntake', 3)">Daily</button>
-        </div>
-
-        <!-- Tobacco Use -->
-        <div class="category">
-            <p>Tobacco Use:</p>
-            <button type="button" onclick="setCategory('tobaccoUse', 0)">No</button>
-            <button type="button" onclick="setCategory('tobaccoUse', 1)">Former</button>
-            <button type="button" onclick="setCategory('tobaccoUse', 2)">Current</button>
-        </div>
-
-        <!-- Employment Status -->
-        <div class="category">
-            <p>Employment Status:</p>
-            <button type="button" onclick="setCategory('employmentStatus', 0)">Healthcare</button>
-            <button type="button" onclick="setCategory('employmentStatus', 1)">Active</button>
-            <button type="button" onclick="setCategory('employmentStatus', 2)">Semi-Active</button>
-            <button type="button" onclick="setCategory('employmentStatus', 3)">Sedentary</button>
-            <button type="button" onclick="setCategory('employmentStatus', 4)">Trade</button>
-            <button type="button" onclick="setCategory('employmentStatus', 5)">Law Enforcement</button>
-            <button type="button" onclick="setCategory('employmentStatus', 6)">Disabled</button>
-            <button type="button" onclick="setCategory('employmentStatus', 7)">Retired</button>
         </div>
 
         <!-- Exercise -->
@@ -133,55 +54,19 @@
             <button type="button" onclick="setCategory('exercise', 1)">Yes</button>
         </div>
 
-        <!-- Drug Use -->
+        <!-- Number of Stories in Home -->
         <div class="category">
-            <p>Drug Use:</p>
-            <button type="button" onclick="setCategory('drugUse', 0)">No</button>
-            <button type="button" onclick="setCategory('drugUse', 1)">Yes</button>
+            <p>Number of Stories in Home:</p>
+            <button type="button" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
+            <button type="button" onclick="setCategory('numberOfStoriesInHome', 2)">2</button>
+            <button type="button" onclick="setCategory('numberOfStoriesInHome', 3)">3</button>
         </div>
 
-        <!-- Distance from Hospital (Miles) -->
+        <!-- 1st floor bedroom -->
         <div class="category">
-            <p>Distance from Hospital (Miles):</p>
-            <input type="number" step="0.01" id="distanceFromHospital" required>
-        </div>
-
-        <!-- Requires Home Medication Assistance -->
-        <div class="category">
-            <p>Requires Home Medication Assistance:</p>
-            <button type="button" onclick="setCategory('requiresHomeMedicationAssistance', 0)">No</button>
-            <button type="button" onclick="setCategory('requiresHomeMedicationAssistance', 1)">Yes</button>
-        </div>
-
-        <!-- Unrelated Impaired Ambulation -->
-        <div class="category">
-            <p>Unrelated Impaired Ambulation:</p>
-            <button type="button" onclick="setCategory('unrelatedImpairedAmbulation', 0)">No</button>
-            <button type="button" onclick="setCategory('unrelatedImpairedAmbulation', 1)">Yes</button>
-        </div>
-
-        <!-- Falls within 1 year -->
-        <div class="category">
-            <p>Falls within 1 year:</p>
-            <button type="button" onclick="setCategory('fallsWithin1Year', 0)">No Falls</button>
-            <button type="button" onclick="setCategory('fallsWithin1Year', 1)">1 Fall, No Injury</button>
-            <button type="button" onclick="setCategory('fallsWithin1Year', 2)">1 Fall with Injury</button>
-            <button type="button" onclick="setCategory('fallsWithin1Year', 3)">2 Falls, No Injury</button>
-            <button type="button" onclick="setCategory('fallsWithin1Year', 4)">2 Falls with Injury</button>
-        </div>
-
-        <!-- Nursing Home in Past 6 Months -->
-        <div class="category">
-            <p>Nursing Home in Past 6 Months:</p>
-            <button type="button" onclick="setCategory('nursingHomeInPast6Months', 0)">No</button>
-            <button type="button" onclick="setCategory('nursingHomeInPast6Months', 1)">Yes</button>
-        </div>
-
-        <!-- Hospital or ER Visits in Past 1 Year -->
-        <div class="category">
-            <p>Hospital or ER Visits in Past 1 Year:</p>
-            <button type="button" onclick="setCategory('hospitalOrERVisitsInPast1Year', 0)">No</button>
-            <button type="button" onclick="setCategory('hospitalOrERVisitsInPast1Year', 1)">Yes</button>
+            <p>1st floor bedroom:</p>
+            <button type="button" onclick="setCategory('firstFloorBedroom', 0)">No</button>
+            <button type="button" onclick="setCategory('firstFloorBedroom', 1)">Yes</button>
         </div>
 
         <!-- Transportation -->
@@ -191,39 +76,11 @@
             <button type="button" onclick="setCategory('transportation', 1)">Yes</button>
         </div>
 
-        <!-- Lives Alone -->
+        <!-- Hospital or ER Visits in Past 1 Year -->
         <div class="category">
-            <p>Lives Alone:</p>
-            <button type="button" onclick="setCategory('livesAlone', 0)">No</button>
-            <button type="button" onclick="setCategory('livesAlone', 1)">Yes</button>
-        </div>
-
-        <!-- Number of Stories in Home -->
-        <div class="category">
-            <p>Number of Stories in Home:</p>
-            <button type="button" onclick="setCategory('numberOfStoriesInHome', 0)">No</button>
-            <button type="button" onclick="setCategory('numberOfStoriesInHome', 1)">Yes</button>
-        </div>
-
-        <!-- Number Stairs entering home -->
-        <div class="category">
-            <p>Number Stairs entering home:</p>
-            <button type="button" onclick="setCategory('numberStairsEnteringHome', 0)">No</button>
-            <button type="button" onclick="setCategory('numberStairsEnteringHome', 1)">Yes</button>
-        </div>
-
-        <!-- 1st floor bathroom -->
-        <div class="category">
-            <p>1st floor bathroom:</p>
-            <button type="button" onclick="setCategory('firstFloorBathroom', 0)">No</button>
-            <button type="button" onclick="setCategory('firstFloorBathroom', 1)">Yes</button>
-        </div>
-
-        <!-- 1st floor bedroom -->
-        <div class="category">
-            <p>1st floor bedroom:</p>
-            <button type="button" onclick="setCategory('firstFloorBedroom', 0)">No</button>
-            <button type="button" onclick="setCategory('firstFloorBedroom', 1)">Yes</button>
+            <p>Hospital or ER Visits in Past 1 Year:</p>
+            <button type="button" onclick="setCategory('hospitalOrERVisitsInPast1Year', 0)">No</button>
+            <button type="button" onclick="setCategory('hospitalOrERVisitsInPast1Year', 1)">Yes</button>
         </div>
 
         <button type="button" onclick="calculateLogisticRegression()">Calculate</button>
