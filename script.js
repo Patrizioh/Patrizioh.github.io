@@ -1,32 +1,59 @@
-function calculate() {
-    // Extract values from the form
-    const previousJointReplacementValue = parseFloat(document.getElementById('previousJointReplacement').value);
-    const bodyMassIndexValue = parseFloat(document.getElementById('bodyMassIndex').value);
-    const diabetesValue = parseFloat(document.getElementById('diabetes').value);
-    const sexValue = parseFloat(document.getElementById('sex').value);
-    const ageValue = parseFloat(document.getElementById('age').value);
+let selectedJoint = 'None';
+let selectedDiabetes = 'No';
+let selectedSex = 'Male';
 
-    // Coefficients
-    const coefficients = {
-        intercept: 2.492513,
-        previousJointReplacement: [0, 1, 2, 3, 4], // For None, THA, TKA, Hemi, Revision respectively
-        bodyMassIndex: 0.03, // Example coefficient, adjust as necessary
-        diabetes: 0.2, // Example coefficient, adjust as necessary
-        sex: 0.1, // Example coefficient, adjust as necessary
-        age: 0.05 // Example coefficient, adjust as necessary
-    };
+function calculateProbability() {
+    const bmi = parseFloat(document.getElementById('bmiInput').value);
+    const age = parseInt(document.getElementById('ageInput').value);
 
-    // Calculate using your coefficients
-    let result = coefficients.intercept +
-                 coefficients.previousJointReplacement[previousJointReplacementValue] +
-                 coefficients.bodyMassIndex * bodyMassIndexValue +
-                 coefficients.diabetes * diabetesValue +
-                 coefficients.sex * sexValue +
-                 coefficients.age * ageValue;
+    // This is just a dummy formula for the sake of demonstration
+    let probability = 0;
+    if (selectedJoint === 'THR') {
+        probability += 0.33;
+    } else if (selectedJoint === 'TKA') {
+        probability += 0.66;
+    }
 
-    // Convert logistic regression result to probability
-    const probability = 1 / (1 + Math.exp(-result));
+    if (selectedDiabetes === 'Yes') {
+        probability += 0.25;
+    }
 
-    // Display the result
-    document.getElementById('result').querySelector('span').textContent = (probability * 100).toFixed(2) + "%";
+    if (selectedSex === 'Male') {
+        probability += 0.10;
+    }
+
+    probability += (bmi / 100) + (age / 100);
+
+    probability = Math.min(probability, 1);  // Ensure the maximum value is 1 (or 100%)
+    document.getElementById('probabilityOutput').innerText = `${(probability * 100).toFixed(2)}%`;
+}
+
+function setJoint(joint) {
+    selectedJoint = joint;
+    updateButtons('jointGroup', joint);
+    calculateProbability();
+}
+
+function setDiabetes(diabetes) {
+    selectedDiabetes = diabetes;
+    updateButtons('diabetesGroup', diabetes);
+    calculateProbability();
+}
+
+function setSex(sex) {
+    selectedSex = sex;
+    updateButtons('sexGroup', sex);
+    calculateProbability();
+}
+
+function updateButtons(groupId, value) {
+    const group = document.getElementById(groupId);
+    const buttons = group.querySelectorAll('button');
+    buttons.forEach(button => {
+        if (button.textContent === value) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
 }
