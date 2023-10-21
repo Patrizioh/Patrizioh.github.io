@@ -1,113 +1,11 @@
+
 /* Global Styles */
 body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
-    animation: fadeIn 1s ease-in-out;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    animation: slideIn 1s ease-in-out;
-}
-
-h1 {
-    background-color: #3498db;
-    color: #fff;
-    padding: 40px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
-
-h2 {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-form {
-    padding: 50px;
-}
-.category button {
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.category button:hover {
-    background-color: #2980b9;
-}
-
-.category button.selected {
-    background-color: #2980b9;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-
-.result-header, .recommendation-header {
-    background-color: #3498db;
-    color: #fff;
-    padding: 40px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
-
-#result, #recommendation {
-    margin-top: 20px;
-    font-size: 10px;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-}
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Button Styles */
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Center Align Elements */
@@ -117,3 +15,56 @@ form {
     align-items: center;
     flex-direction: column;
 }
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Button Styles */
+.button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Form Styles */
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Result and Recommendation */
+#result, #recommendation {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
