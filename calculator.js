@@ -1,13 +1,40 @@
 // Coefficients for logistic regression
 const coefficients = {
-    // ... (same coefficients as before)
+    intercept: 2.495213,
+    previousJointReplacement: 0.042377,
+    typeOfSurgery: -0.32406,
+    distanceFromHospital: 0.00161,
+    sex: -0.3021,
+    procedureAge: -0.04224,
+    race: -0.22617,
+    ethnicity: 0.692926,
+    BMI: 0.007833,
+    employmentStatus: -0.01879,
+    maritalStatus: -0.02358,
+    ASAScore: -1.57505,
+    CCI: -0.20137,
+    exercise: 1.906765,
+    drugUse: 0.676727,
+    tobaccoUse: 0.023945,
+    alcoholUse: 0.33429,
+    alcoholIntake: 0.033555,
+    requiresHomeMedicationAssistance: 0.078272,
+    unrelatedImpairedAmbulation: 0.28765,
+    fallsWithin1Year: -0.00419,
+    nursingHomeInPast6Months: -0.24325,
+    hospitalOrERVisitsInPast1Year: -0.4485,
+    transportation: 0.713789,
+    livesAlone: 0.057894,
+    numberOfStoriesInHome: 1.149678,
+    numberStairsEnteringHome: -0.01941,
+    firstFloorBathroom: 0.160448,
+    firstFloorBedroom: 0.769372,
 };
 
 // Object to store categorical values
 const categoricalValues = {
     previousJointReplacement: 0,
     typeOfSurgery: 0,
-    outcomePredictor: 0,
     sex: 0,
     race: 0,
     ethnicity: 0,
