@@ -66,8 +66,8 @@ form {
 
 #result, #recommendation {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 10px;
     text-align: center;
-    color: #3498db;
+    color: #fff;
     font-weight: bold;
 }
