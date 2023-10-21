@@ -33,12 +33,11 @@ h1 {
 h2 {
     background-color: #3498db;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px 5px 0 0;
     text-align: center;
 form {
     padding: 50px;
- text-align: center;
 }
 .category button {
     margin: 5px;
