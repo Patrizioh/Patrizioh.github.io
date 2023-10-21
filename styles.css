@@ -125,3 +125,47 @@ input[type="text"] {
         padding: 8px 16px;
     }
 }
+
+/* Existing Styles (including responsive styles) are retained here... */
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+}
+
+.container.dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.header.dark-mode h1, .header.dark-mode h2 {
+    color: #ffffff;
+}
+
+label.dark-mode {
+    color: #ffffff;
+}
+
+input[type="text"].dark-mode {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.output-section.dark-mode h3 {
+    color: #ffffff;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+}

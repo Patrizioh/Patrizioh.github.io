@@ -102,3 +102,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Existing functions and event listeners...
+
+// Dark Mode Toggle Function
+function toggleDarkMode() {
+    const elementsToToggle = [
+        document.body,
+        document.querySelector(".container"),
+        document.querySelector(".header"),
+        ...document.querySelectorAll("label"),
+        ...document.querySelectorAll("input[type='text']"),
+        document.querySelector(".output-section")
+    ];
+    
+    elementsToToggle.forEach((element) => element.classList.toggle("dark-mode"));
+}
+
+// Event Listener for Dark Mode Toggle Button
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("dark-mode-toggle").addEventListener("click", toggleDarkMode);
+});
