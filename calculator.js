@@ -1,6 +1,6 @@
 const coefficients = {
     intercept: 2.495213,
-    procedureAge: -0.04224,
+    procedureAge: -0.4224,
     CCI: -0.20137,
     sex: -0.3021,
     typeOfSurgery: -0.32406,
