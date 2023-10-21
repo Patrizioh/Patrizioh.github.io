@@ -12,56 +12,50 @@
         
         <form id="logisticRegressionForm">
             <!-- Procedure Age -->
-            <div class="category">
+            <div class="category procedureAge">
                 <p>Procedure Age:</p>
                 <input type="number" step="0.01" id="procedureAge" required>
             </div>
-
             <!-- CCI -->
-            <div class="category">
+            <div class="category CCI">
                 <p>CCI:</p>
                 <input type="number" step="0.01" id="CCI" required>
             </div>
-
-            <!-- Sex (Male or Female) -->
-            <div class="category">
+            <!-- Sex -->
+            <div class="category sex">
                 <p>Sex (Male or Female):</p>
-                <button type="button" onclick="setCategory('sex', 0)">Male</button>
-                <button type="button" onclick="setCategory('sex', 1)">Female</button>
+                <button type="button" data-value="0" onclick="setCategory('sex', 0)">Male</button>
+                <button type="button" data-value="1" onclick="setCategory('sex', 1)">Female</button>
             </div>
-
             <!-- Type of Surgery -->
-            <div class="category">
+            <div class="category typeOfSurgery">
                 <p>Type of Surgery:</p>
-                <button type="button" onclick="setCategory('typeOfSurgery', 0)">THA</button>
-                <button type="button" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
+                <button type="button" data-value="0" onclick="setCategory('typeOfSurgery', 0)">THA</button>
+                <button type="button" data-value="1" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
             </div>
-
             <!-- ASA Score -->
-            <div class="category">
+            <div class="category ASAScore">
                 <p>ASA Score:</p>
                 <input type="number" step="0.01" id="ASAScore" required>
             </div>
-
             <!-- Exercise -->
-            <div class="category">
+            <div class="category exercise">
                 <p>Exercise:</p>
-                <button type="button" onclick="setCategory('exercise', 0)">No</button>
-                <button type="button" onclick="setCategory('exercise', 1)">Yes</button>
+                <button type="button" data-value="0" onclick="setCategory('exercise', 0)">No</button>
+                <button type="button" data-value="1" onclick="setCategory('exercise', 1)">Yes</button>
             </div>
-
             <!-- Number of Stories in Home -->
-            <div class="category">
+            <div class="category numberOfStoriesInHome">
                 <p>Number of Stories in Home:</p>
-                <button type="button" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
-                <button type="button" onclick="setCategory('numberOfStoriesInHome', 2)">2</button>
-                <button type="button" onclick="setCategory('numberOfStoriesInHome', 3)">3</button>
+                <button type="button" data-value="1" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
+                <button type="button" data-value="2" onclick="setCategory('numberOfStoriesInHome', 2)">2</button>
+                <button type="button" data-value="3" onclick="setCategory('numberOfStoriesInHome', 3)">3</button>
             </div>
         </form>
-
+        
+        <!-- Result and Recommendation -->
         <h2>Result:</h2>
         <p id="result">Probability of Outcome: <span id="probabilityPercent"></span>%</p>
-
         <h2>Recommendation:</h2>
         <p id="recommendation"></p>
     </div>
