@@ -34,10 +34,19 @@ function calculateLogisticRegression() {
 
     // Calculate the logistic regression probability
     const probability = 1 / (1 + Math.exp(-linearCombination));
+    const probabilityPercent = (probability * 100).toFixed(2); // Convert to percentage
 
     // Display the result
-    const resultElement = document.getElementById('result');
-    resultElement.textContent = `Probability of Outcome: ${probability.toFixed(4)}`;
+    const probabilityPercentElement = document.getElementById('probabilityPercent');
+    probabilityPercentElement.textContent = probabilityPercent;
+
+    // Provide a recommendation
+    const recommendationElement = document.getElementById('recommendation');
+    if (probability >= 0.8) {
+        recommendationElement.textContent = 'Recommendation: Surgery Center';
+    } else {
+        recommendationElement.textContent = 'Recommendation: Hospital';
+    }
 }
 
 // Add event listeners to input fields to trigger auto-calculation
