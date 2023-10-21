@@ -1,22 +1,25 @@
 /* Global Styles */
-body {
+body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
     animation: fadeIn 1s ease-in-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     max-width: 600px;
-    margin: 0 auto; /* This will center the container */
+    margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     animation: slideIn 1s ease-in-out;
 }
-
 
 h1 {
     background-color: #3498db;
@@ -29,68 +32,6 @@ h1 {
 form {
     padding: 20px;
 }
-
-/* Category Buttons */
-.category button {
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.category button:hover {
-    background-color: #2980b9;
-}
-
-.category button.selected {
-    background-color: #2980b9;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Result Display */
-#result {
-    margin-top: 20px;
-    font-size: 20px;
-    text-align: center;
-    color: #3498db;
-    font-weight: bold;
-}
-/* Result Box */
-.result-box, .recommendation-box {
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.result-box h2, .recommendation-box h2 {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
-
-#result, #recommendation {
-    margin-top: 20px;
-    font-size: 20px;
-    text-align: center;
-    color: #3498db;
-    font-weight: bold;
-}
-.sub-header {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
 
 /* Animations */
 @keyframes fadeIn {
@@ -111,4 +52,21 @@ form {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.result-header, .recommendation-header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result, #recommendation {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #3498db;
+    font-weight: bold;
 }
