@@ -51,6 +51,22 @@ form {
 .category button.selected {
     background-color: #2980b9;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+.result-header, .recommendation-header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+#result, #recommendation {
+    margin-top: 20px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -70,20 +86,4 @@ form {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-.result-header, .recommendation-header {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
-
-#result, #recommendation {
-    margin-top: 20px;
-    font-size: 10px;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
 }
