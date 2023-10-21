@@ -10,40 +10,47 @@
     <div class="container">
         <h1>Logistic Regression Calculator</h1>
         <h2 class="subtitle">Predict Your Surgical Outcome</h2>
-        
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a class="nav-button" href="about.html">About</a>
+            <button class="nav-button reset-button" onclick="resetCalculator()">Reset</button>
         </nav>
         
         <form id="logisticRegressionForm">
+            <!-- All your categories go here -->
+            <!-- Procedure Age -->
             <div class="category procedureAge">
                 <p>Procedure Age:</p>
                 <input type="number" step="1" id="procedureAge" required>
             </div>
+            <!-- CCI -->
             <div class="category CCI">
                 <p>CCI:</p>
                 <input type="number" step="1" id="CCI" required>
             </div>
+            <!-- Sex -->
             <div class="category sex">
                 <p>Sex (Male or Female):</p>
                 <button type="button" data-value="0" onclick="setCategory('sex', 0)">Male</button>
                 <button type="button" data-value="1" onclick="setCategory('sex', 1)">Female</button>
             </div>
+            <!-- Type of Surgery -->
             <div class="category typeOfSurgery">
                 <p>Type of Surgery:</p>
                 <button type="button" data-value="0" onclick="setCategory('typeOfSurgery', 0)">THA</button>
                 <button type="button" data-value="1" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
             </div>
+            <!-- ASA Score -->
             <div class="category ASAScore">
                 <p>ASA Score:</p>
                 <input type="number" step="1" id="ASAScore" required>
             </div>
+            <!-- Exercise -->
             <div class="category exercise">
                 <p>Exercise:</p>
                 <button type="button" data-value="0" onclick="setCategory('exercise', 0)">No</button>
                 <button type="button" data-value="1" onclick="setCategory('exercise', 1)">Yes</button>
             </div>
+            <!-- Number of Stories in Home -->
             <div class="category numberOfStoriesInHome">
                 <p>Number of Stories in Home:</p>
                 <button type="button" data-value="1" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
