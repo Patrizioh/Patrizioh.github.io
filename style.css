@@ -83,6 +83,14 @@ form {
     color: #3498db;
     font-weight: bold;
 }
+.sub-header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
