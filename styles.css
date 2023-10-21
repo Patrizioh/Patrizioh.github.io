@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
     color: #777;
 }
@@ -168,4 +168,13 @@ input[type="text"].dark-mode {
     padding: 10px 20px;
     border-radius: 4px;
     z-index: 1000;
+}
+
+/* Existing Styles (including Dark Mode) are retained here... */
+
+/* Smaller Subtitle */
+h2 {
+    font-size: 1rem;  /* Adjusted font size */
+    margin-bottom: 30px;
+    color: #777;
 }
