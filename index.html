@@ -2,57 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>SCCD Calculator</title>
+    <title>Logistic Regression Calculator</title>
+    <style>
+        /* You can add your CSS styles here for later theming */
+    </style>
 </head>
 <body>
+    <h1>Logistic Regression Calculator</h1>
+    
+    <form id="logisticRegressionForm">
+        <label for="previousJointReplacement">Previous Joint Replacement:</label>
+        <input type="number" step="0.01" id="previousJointReplacement" required><br>
 
-<div class="header">
-    <h1>SCCD Probability Calculator</h1>
-</div>
+        <label for="typeOfSurgery">Type of Surgery:</label>
+        <input type="number" step="0.01" id="typeOfSurgery" required><br>
 
-<div class="calculator">
-    <div class="content">
+        <label for="distanceFromHospital">Distance from Hospital in Miles:</label>
+        <input type="number" step="0.01" id="distanceFromHospital" required><br>
 
-        <!-- Previous Joint Replacement section -->
-        <h3>Previous Joint Replacement:</h3>
-        <div class="button-group" id="jointGroup">
-            <button onclick="setJoint('None')">None</button>
-            <button onclick="setJoint('THA')">THR</button>
-            <button onclick="setJoint('TKA')">TKA</button>
-        </div>
+        <label for="sex">Sex:</label>
+        <input type="number" step="0.01" id="sex" required><br>
 
-        <!-- Body Mass Index section -->
-        <h3>Body Mass Index:</h3>
-        <input type="number" id="bmiInput" onchange="calculateProbability()">
+        <label for="procedureAge">Procedure Age:</label>
+        <input type="number" step="0.01" id="procedureAge" required><br>
 
-        <!-- Diabetes section -->
-        <h3>Diabetes:</h3>
-        <div class="button-group" id="diabetesGroup">
-            <button onclick="setDiabetes('No')">No</button>
-            <button onclick="setDiabetes('Yes')">Yes</button>
-        </div>
+        <label for="race">Race:</label>
+        <input type="number" step="0.01" id="race" required><br>
 
-        <!-- Sex section -->
-        <h3>Sex:</h3>
-        <div class="button-group" id="sexGroup">
-            <button onclick="setSex('Male')">Male</button>
-            <button onclick="setSex('Female')">Female</button>
-        </div>
+        <label for="ethnicity">Ethnicity:</label>
+        <input type="number" step="0.01" id="ethnicity" required><br>
 
-        <!-- Age section -->
-        <h3>Age:</h3>
-        <input type="number" id="ageInput" onchange="calculateProbability()">
+        <label for="BMI">BMI:</label>
+        <input type="number" step="0.01" id="BMI" required><br>
 
-        <!-- Result -->
-        <div id="result">
-            Probability of SCCD: <span id="probabilityOutput">0%</span>
-        </div>
-    </div>
-</div>
+        <label for="employment">Employment:</label>
+        <input type="number" step="0.01" id="employment" required><br>
 
-<script src="script.js"></script>
+        <label for="maritalStatus">Marital Status:</label>
+        <input type="number" step="0.01" id="maritalStatus" required><br>
+
+        <label for="ASAScore">ASA Score:</label>
+        <input type="number" step="0.01" id="ASAScore" required><br>
+
+        <label for="CCI">CCI:</label>
+        <input type="number" step="0.01" id="CCI" required><br>
+
+        <label for="exercise">Exercise:</label>
+        <input type="number" step="0.01" id="exercise" required><br>
+
+        <label for="drugUse">Drug Use:</label>
+        <input type="number" step="0.01" id="drugUse" required><br>
+
+        <label for="tobaccoUse">Tobacco Use:</label>
+        <input type="number" step="0.01" id="tobaccoUse" required><br>
+
+        <label for="alcoholUse">Alcohol Use:</label>
+        <input type="number" step="0.01" id="alcoholUse" required><br>
+
+        <label for="alcoholIntake">Alcohol Intake:</label>
+        <input type="number" step="0.01" id="alcoholIntake" required><br>
+
+        <label for="requireMedsAssistance">Require Meds Assistance:</label>
+        <input type="number" step="0.01" id="requireMedsAssistance" required><br>
+
+        <label for="impairedAmbulation">Unrelated Impaired Ambulation:</label>
+        <input type="number" step="0.01" id="impairedAmbulation" required><br>
+
+        <label for="numberOfFalls">Number of Falls within 1 year:</label>
+        <input type="number" step="0.01" id="numberOfFalls" required><br>
+
+        <label for="nursingHome">Nursing Home in Past 6 Months:</label>
+        <input type="number" step="0.01" id="nursingHome" required><br>
+
+        <label for="hospitalVisits">Hospital or ER Visits in Past 1 Year:</label>
+        <input type="number" step="0.01" id="hospitalVisits" required><br>
+
+        <label for="transportation">Transportation:</label>
+        <input type="number" step="0.01" id="transportation" required><br>
+
+        <label for="livesAlone">Lives Alone:</label>
+        <input type="number" step="0.01" id="livesAlone" required><br>
+
+        <label for="numberOfStories">Number of Stories in Home:</label>
+        <input type="number" step="0.01" id="numberOfStories" required><br>
+
+        <label for="stairsEnteringHome">Number Stairs entering home:</label>
+        <input type="number" step="0.01" id="stairsEnteringHome" required><br>
+
+        <label for="firstFloorBathroom">1st floor bathroom:</label>
+        <input type="number" step="0.01" id="firstFloorBathroom" required><br>
+
+        <label for="firstFloorBedroom">1st floor bedroom:</label>
+        <input type="number" step="0.01" id="firstFloorBedroom" required><br>
+
+        <button type="button" onclick="calculateLogisticRegression()">Calculate</button>
+    </form>
+
+    <h2>Result:</h2>
+    <p id="result"></p>
+
+    <script src="calculator.js"></script>
 </body>
 </html>
