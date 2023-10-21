@@ -8,9 +8,18 @@ const categoricalValues = {
     // Add your categorical values here
 };
 
-// Function to set categorical values
+// Function to set categorical values and toggle the "selected" class
 function setCategory(category, value) {
     categoricalValues[category] = value;
+    
+    // Remove the "selected" class from all buttons in the category
+    const categoryButtons = document.querySelectorAll(`.category.${category} button`);
+    categoryButtons.forEach(button => button.classList.remove('selected'));
+    
+    // Add the "selected" class to the clicked button
+    const clickedButton = document.querySelector(`.category.${category} button[data-value="${value}"]`);
+    clickedButton.classList.add('selected');
+    
     calculateLogisticRegression(); // Auto-calculate when a value changes
 }
 
