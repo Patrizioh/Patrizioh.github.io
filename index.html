@@ -4,91 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logistic Regression Calculator</title>
-    <style>
-        /* You can add your CSS styles here for later theming */
-        .category {
-            text-align: center;
-        }
-    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Logistic Regression Calculator</h1>
-    
-    <form id="logisticRegressionForm">
-        <!-- Procedure Age -->
-        <div class="category">
-            <p>Procedure Age:</p>
-            <input type="number" step="0.01" id="procedureAge" required>
-        </div>
+    <div class="container">
+        <h1>Logistic Regression Calculator</h1>
+        
+        <form id="logisticRegressionForm">
+            <!-- Procedure Age -->
+            <div class="category">
+                <p>Procedure Age:</p>
+                <input type="number" step="0.01" id="procedureAge" required>
+            </div>
 
-        <!-- CCI -->
-        <div class="category">
-            <p>CCI:</p>
-            <input type="number" step="0.01" id="CCI" required>
-        </div>
+            <!-- CCI -->
+            <div class="category">
+                <p>CCI:</p>
+                <input type="number" step="0.01" id="CCI" required>
+            </div>
 
-        <!-- Sex (Male or Female) -->
-        <div class="category">
-            <p>Sex (Male or Female):</p>
-            <button type="button" onclick="setCategory('sex', 0)">Male</button>
-            <button type="button" onclick="setCategory('sex', 1)">Female</button>
-        </div>
+            <!-- Sex (Male or Female) -->
+            <div class="category">
+                <p>Sex (Male or Female):</p>
+                <button type="button" onclick="setCategory('sex', 0)">Male</button>
+                <button type="button" onclick="setCategory('sex', 1)">Female</button>
+            </div>
 
-        <!-- Type of Surgery -->
-        <div class="category">
-            <p>Type of Surgery:</p>
-            <button type="button" onclick="setCategory('typeOfSurgery', 0)">THA</button>
-            <button type="button" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
-        </div>
+            <!-- Type of Surgery -->
+            <div class="category">
+                <p>Type of Surgery:</p>
+                <button type="button" onclick="setCategory('typeOfSurgery', 0)">THA</button>
+                <button type="button" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
+            </div>
 
-        <!-- ASA Score -->
-        <div class="category">
-            <p>ASA Score:</p>
-            <input type="number" step="0.01" id="ASAScore" required>
-        </div>
+            <!-- ASA Score -->
+            <div class="category">
+                <p>ASA Score:</p>
+                <input type="number" step="0.01" id="ASAScore" required>
+            </div>
 
-        <!-- Exercise -->
-        <div class="category">
-            <p>Exercise:</p>
-            <button type="button" onclick="setCategory('exercise', 0)">No</button>
-            <button type="button" onclick="setCategory('exercise', 1)">Yes</button>
-        </div>
+            <!-- Exercise -->
+            <div class="category">
+                <p>Exercise:</p>
+                <button type="button" onclick="setCategory('exercise', 0)">No</button>
+                <button type="button" onclick="setCategory('exercise', 1)">Yes</button>
+            </div>
 
-        <!-- Number of Stories in Home -->
-        <div class="category">
-            <p>Number of Stories in Home:</p>
-            <button type="button" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
-            <button type="button" onclick="setCategory('numberOfStoriesInHome', 2)">2</button>
-            <button type="button" onclick="setCategory('numberOfStoriesInHome', 3)">3</button>
-        </div>
+            <!-- Number of Stories in Home -->
+            <div class="category">
+                <p>Number of Stories in Home:</p>
+                <button type="button" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
+                <button type="button" onclick="setCategory('numberOfStoriesInHome', 2)">2</button>
+                <button type="button" onclick="setCategory('numberOfStoriesInHome', 3)">3</button>
+            </div>
+        </form>
 
-        <!-- 1st floor bedroom -->
-        <div class="category">
-            <p>1st floor bedroom:</p>
-            <button type="button" onclick="setCategory('firstFloorBedroom', 0)">No</button>
-            <button type="button" onclick="setCategory('firstFloorBedroom', 1)">Yes</button>
-        </div>
+        <h2>Result:</h2>
+        <p id="result">Probability of Outcome: <span id="probabilityPercent"></span>%</p>
 
-        <!-- Transportation -->
-        <div class="category">
-            <p>Transportation:</p>
-            <button type="button" onclick="setCategory('transportation', 0)">No</button>
-            <button type="button" onclick="setCategory('transportation', 1)">Yes</button>
-        </div>
-
-        <!-- Hospital or ER Visits in Past 1 Year -->
-        <div class="category">
-            <p>Hospital or ER Visits in Past 1 Year:</p>
-            <button type="button" onclick="setCategory('hospitalOrERVisitsInPast1Year', 0)">No</button>
-            <button type="button" onclick="setCategory('hospitalOrERVisitsInPast1Year', 1)">Yes</button>
-        </div>
-
-        <button type="button" onclick="calculateLogisticRegression()">Calculate</button>
-    </form>
-
-    <h2>Result:</h2>
-    <p id="result"></p>
+        <h2>Recommendation:</h2>
+        <p id="recommendation"></p>
+    </div>
 
     <script src="calculator.js"></script>
 </body>
