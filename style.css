@@ -9,13 +9,14 @@ body {
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto; /* This will center the container */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     animation: slideIn 1s ease-in-out;
 }
+
 
 h1 {
     background-color: #3498db;
