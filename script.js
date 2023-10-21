@@ -8,10 +8,10 @@ function calculateProbability() {
 
     // This is just a dummy formula for the sake of demonstration
     let probability = 0;
-    if (selectedJoint === 'THR') {
-        probability += 0.33;
+    if (selectedJoint === 'THA') {
+        probability += 0;
     } else if (selectedJoint === 'TKA') {
-        probability += 0.66;
+        probability += 1;
     }
 
     if (selectedDiabetes === 'Yes') {
