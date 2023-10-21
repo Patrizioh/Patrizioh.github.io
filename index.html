@@ -1,91 +1,72 @@
-/* Global Styles */
-body, html {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    animation: fadeIn 1s ease-in-out;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Regression Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Logistic Regression Calculator</h1>
+        <h2 class="subtitle">Predict Your Surgical Outcome</h2>
+ <nav>
+            <a class="nav-button" href="about.html">About</a>
+            <button class="nav-button" onclick="resetCalculator()">Reset</button>
+        </nav>
+        
+        <form id="logisticRegressionForm">
+            <!-- Procedure Age -->
+            <div class="category procedureAge">
+                <p>Procedure Age:</p>
+                <input type="number" step="1" id="procedureAge" required>
+            </div>
+            <!-- CCI -->
+            <div class="category CCI">
+                <p>CCI:</p>
+                <input type="number" step="1" id="CCI" required>
+            </div>
+            <!-- Sex -->
+            <div class="category sex">
+                <p>Sex (Male or Female):</p>
+                <button type="button" data-value="0" onclick="setCategory('sex', 0)">Male</button>
+                <button type="button" data-value="1" onclick="setCategory('sex', 1)">Female</button>
+            </div>
+            <!-- Type of Surgery -->
+            <div class="category typeOfSurgery">
+                <p>Type of Surgery:</p>
+                <button type="button" data-value="0" onclick="setCategory('typeOfSurgery', 0)">THA</button>
+                <button type="button" data-value="1" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
+            </div>
+            <!-- ASA Score -->
+            <div class="category ASAScore">
+                <p>ASA Score:</p>
+                <input type="number" step="1" id="ASAScore" required>
+            </div>
+            <!-- Exercise -->
+            <div class="category exercise">
+                <p>Exercise:</p>
+                <button type="button" data-value="0" onclick="setCategory('exercise', 0)">No</button>
+                <button type="button" data-value="1" onclick="setCategory('exercise', 1)">Yes</button>
+            </div>
+            <!-- Number of Stories in Home -->
+            <div class="category numberOfStoriesInHome">
+                <p>Number of Stories in Home:</p>
+                <button type="button" data-value="1" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
+                <button type="button" data-value="2" onclick="setCategory('numberOfStoriesInHome', 2)">2</button>
+                <button type="button" data-value="3" onclick="setCategory('numberOfStoriesInHome', 3)">3</button>
+            </div>
+        </form>
+        
+        <!-- Result and Recommendation -->
+     <h2 class="header">Result:</h2>
+    <p id="result">Probability of Successful Same Day Surgery: <span id="probabilityPercent"></span></p>
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    animation: slideIn 1s ease-in-out;
-}
+    <h2 class="header">Recommendation:</h2>
+    <p id="recommendation"></p>
+</div>
 
-h1 {
-    background-color: #3498db;
-    color: #fff;
-    padding: 40px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
 
-form {
-    padding: 50px;
- text-align: center;
-}
-.category button {
-    margin: 5px;
-    padding: 40px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.category button:hover {
-    background-color: #2980b9;
-}
-
-.category button.selected {
-    background-color: #2980b9;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-
-.result-header, .recommendation-header {
-    background-color: #3498db;
-    color: #fff;
-    padding: 40px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
-
-#result, #recommendation {
-    margin-top: 20px;
-    font-size: 10px;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-}
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+    <script src="calculator.js"></script>
+</body>
+</html>
