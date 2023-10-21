@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistic Regression Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Predict Your Surgical Outcome</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Logistic Regression Calculator</h1>
-        <h2 class="subtitle">Predict Your Surgical Outcome</h2>
+        <h1>Predict Your Surgical Outcome</h1>
 
- <nav>
-            <a class="nav-button" href="about.html">About</a>
-            <button class="nav-button" onclick="resetCalculator()">Reset</button>
-        </nav>
-        
-        <form id="logisticRegressionForm">
-            <!-- Procedure Age -->
-            <div class="category procedureAge">
-                <p>Procedure Age:</p>
-                <input type="number" step="1" id="procedureAge" required>
-            </div>
-            <!-- CCI -->
-            <div class="category CCI">
-                <p>CCI:</p>
-                <input type="number" step="1" id="CCI" required>
-            </div>
-            <!-- Sex -->
-            <div class="category sex">
-                <p>Sex (Male or Female):</p>
-                <button type="button" data-value="0" onclick="setCategory('sex', 0)">Male</button>
-                <button type="button" data-value="1" onclick="setCategory('sex', 1)">Female</button>
-            </div>
-            <!-- Type of Surgery -->
-            <div class="category typeOfSurgery">
-                <p>Type of Surgery:</p>
-                <button type="button" data-value="0" onclick="setCategory('typeOfSurgery', 0)">THA</button>
-                <button type="button" data-value="1" onclick="setCategory('typeOfSurgery', 1)">TKA</button>
-            </div>
-            <!-- ASA Score -->
-            <div class="category ASAScore">
-                <p>ASA Score:</p>
-                <input type="number" step="1" id="ASAScore" required>
-            </div>
-            <!-- Exercise -->
-            <div class="category exercise">
-                <p>Exercise:</p>
-                <button type="button" data-value="0" onclick="setCategory('exercise', 0)">No</button>
-                <button type="button" data-value="1" onclick="setCategory('exercise', 1)">Yes</button>
-            </div>
-            <!-- Number of Stories in Home -->
-            <div class="category numberOfStoriesInHome">
-                <p>Number of Stories in Home:</p>
-                <button type="button" data-value="1" onclick="setCategory('numberOfStoriesInHome', 1)">1</button>
-                <button type="button" data-value="2" onclick="setCategory('numberOfStoriesInHome', 2)">2</button>
-                <button type="button" data-value="3" onclick="setCategory('numberOfStoriesInHome', 3)">3</button>
-            </div>
+        <form>
+            <label for="age">Procedure Age:</label>
+            <input type="text" id="age" name="age">
+
+            <label for="cci">CCI:</label>
+            <input type="text" id="cci" name="cci">
+
+            <label>Sex (Male or Female):</label>
+            <input type="radio" id="male" name="sex" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="female">
+            <label for="female">Female</label>
+
+            <label>Type of Surgery:</label>
+            <input type="radio" id="tha" name="surgery" value="THA">
+            <label for="tha">THA</label>
+            <input type="radio" id="tka" name="surgery" value="TKA">
+            <label for="tka">TKA</label>
+
+            <label for="asaScore">ASA Score:</label>
+            <input type="text" id="asaScore" name="asaScore">
+
+            <label>Exercise:</label>
+            <input type="radio" id="no" name="exercise" value="no">
+            <label for="no">No</label>
+            <input type="radio" id="yes" name="exercise" value="yes">
+            <label for="yes">Yes</label>
+
+            <label>Number of Stories in Home:</label>
+            <input type="radio" id="one" name="stories" value="1">
+            <label for="one">1</label>
+            <input type="radio" id="two" name="stories" value="2">
+            <label for="two">2</label>
+            <input type="radio" id="three" name="stories" value="3">
+            <label for="three">3</label>
+
+            <input type="submit" value="Result:">
         </form>
-        
-        <!-- Result and Recommendation -->
-     <h2 class="sub-header">Result:</h2>
-    <h2>Result:</h2>
-    <p id="result">Probability of Outcome: <span id="probabilityPercent"></span></p>
-</div>
-<h2 class="sub-header">Recommendation:</h2>
-    <h2>Recommendation:</h2>
-    <p id="recommendation"></p>
-</div>
+
+        <div class="result-header">
+            <h2>Result:</h2>
+        </div>
+        <p id="result">Probability of Outcome:</p>
+
+        <div class="recommendation-header">
+            <h2>Recommendation:</h2>
+        </div>
+        <p id="recommendation">Please fill in all required fields</p>
+    </div>
 
 
     <script src="calculator.js"></script>
