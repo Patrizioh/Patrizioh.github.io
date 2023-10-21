@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         document.getElementById("outcome").textContent = "";
         document.getElementById("recommendation").textContent = "";
+        document.getElementById("outcome").style.color = "black";
     });
     
     // Add event listeners for calculating outcome and recommendation
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let probability = logisticRegression(age, asa, sex, surgeryType, exercise, stories);
                 document.getElementById("outcome").textContent = probability.toFixed(2) + "%";
                 document.getElementById("recommendation").textContent = setRecommendation(probability);
+                document.getElementById("outcome").style.color = (probability < 80) ? "red" : "green";
             }
         });
     });
