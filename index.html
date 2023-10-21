@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCCD Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <label for="previousJointReplacement">Previous Joint Replacement:</label>
+        <select id="previousJointReplacement">
+            <option value="0">None</option>
+            <option value="1">THA</option>
+            <option value="2">TKA</option>
+            <option value="3">Hemi</option>
+            <option value="4">Revision</option>
+        </select>
+        
+        <label for="bodyMassIndex">Body Mass Index:</label>
+        <input type="number" id="bodyMassIndex" placeholder="Enter BMI">
+
+        <label for="diabetes">Diabetes:</label>
+        <select id="diabetes">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="sex">Sex:</label>
+        <select id="sex">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter Age">
+        
+        <button onclick="calculate()">Calculate</button>
+        <div id="result">Probability of SCCD: <span></span></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
