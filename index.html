@@ -10,13 +10,13 @@
     <div class="container">
         <h1>Logistic Regression Calculator</h1>
         <h2 class="subtitle">Predict Your Surgical Outcome</h2>
-        <nav>
-            <a class="nav-button" href="about.html">About</a>
-            <button class="nav-button reset-button" onclick="resetCalculator()">Reset</button>
+
+      <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
         </nav>
         
         <form id="logisticRegressionForm">
-            <!-- All your categories go here -->
             <!-- Procedure Age -->
             <div class="category procedureAge">
                 <p>Procedure Age:</p>
@@ -59,12 +59,13 @@
             </div>
         </form>
         
+        <!-- Result and Recommendation -->
         <h2>Result:</h2>
         <p id="result">Probability of Outcome: <span id="probabilityPercent"></span></p>
         <h2>Recommendation:</h2>
         <p id="recommendation"></p>
     </div>
-    
+
     <script src="calculator.js"></script>
 </body>
 </html>
