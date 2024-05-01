@@ -13,66 +13,66 @@
             <div class="form-group">
                 <div class="label-group">
                     <label>Surgery Type:</label>
-                    <button type="button" class="btn option" data-field="surgeryType" data-value="0" onclick="selectOption('surgeryType', 0)">THA</button>
+                    <button type="button" class="btn option selected" data-field="surgeryType" data-value="0" onclick="selectOption('surgeryType', 0)">THA</button>
                     <button type="button" class="btn option" data-field="surgeryType" data-value="-0.46" onclick="selectOption('surgeryType', -0.46)">TKA</button>
-                    <input type="hidden" id="surgeryType" value="">
+                    <input type="hidden" id="surgeryType" value="0">
                 </div>
                 <div class="label-group">
                     <label>Sex:</label>
-                    <button type="button" class="btn option" data-field="sex" data-value="0" onclick="selectOption('sex', 0)">Male</button>
+                    <button type="button" class="btn option selected" data-field="sex" data-value="0" onclick="selectOption('sex', 0)">Male</button>
                     <button type="button" class="btn option" data-field="sex" data-value="-0.27" onclick="selectOption('sex', -0.27)">Female</button>
-                    <input type="hidden" id="sex" value="">
+                    <input type="hidden" id="sex" value="0">
                 </div>
             </div>
             <div class="form-group">
                 <div class="label-group">
                     <label for="age">Age:</label>
-                    <input type="number" id="age" class="form-control">
+                    <input type="number" id="age" class="form-control" value="65">
                 </div>
                 <div class="label-group">
-                    <label>Race:</label>
-                    <button type="button" class="btn option" data-field="race" data-value="0" onclick="selectOption('race', 0)">White</button>
-                    <button type="button" class="btn option" data-field="race" data-value="-0.83" onclick="selectOption('race', -0.83)">Black</button>
-                    <button type="button" class="btn option" data-field="race" data-value="1.06" onclick="selectOption('race', 1.06)">Asian</button>
-                    <button type="button" class="btn option" data-field="race" data-value="-0.63" onclick="selectOption('race', -0.63)">Pacific</button>
-                    <button type="button" class="btn option" data-field="race" data-value="-0.74" onclick="selectOption('race', -0.74)">Unreported</button>
-                    <input type="hidden" id="race" value="">
+                    <label for="asaScore">ASA Score:</label>
+                    <input type="number" id="asaScore" class="form-control" value="1">
                 </div>
             </div>
             <div class="form-group">
                 <div class="label-group">
+                    <label>Race:</label>
+                    <button type="button" class="btn option selected" data-field="race" data-value="0" onclick="selectOption('race', 0)">White</button>
+                    <button type="button" class="btn option" data-field="race" data-value="-0.83" onclick="selectOption('race', -0.83)">Black</button>
+                    <button type="button" class="btn option" data-field="race" data-value="1.06" onclick="selectOption('race', 1.06)">Asian</button>
+                    <button type="button" class="btn option" data-field="race" data-value="-0.63" onclick="selectOption('race', -0.63)">Pacific</button>
+                    <button type="button" class="btn option" data-field="race" data-value="-0.74" onclick="selectOption('race', -0.74)">Unreported</button>
+                    <input type="hidden" id="race" value="0">
+                </div>
+                <div class="label-group">
                     <label>Marital Status:</label>
-                    <button type="button" class="btn option" data-field="maritalStatus" data-value="0" onclick="selectOption('maritalStatus', 0)">Single</button>
+                    <button type="button" class="btn option selected" data-field="maritalStatus" data-value="0" onclick="selectOption('maritalStatus', 0)">Single</button>
                     <button type="button" class="btn option" data-field="maritalStatus" data-value="0.3" onclick="selectOption('maritalStatus', 0.3)">Married</button>
                     <button type="button" class="btn option" data-field="maritalStatus" data-value="-0.33" onclick="selectOption('maritalStatus', -0.33)">Divorced</button>
                     <button type="button" class="btn option" data-field="maritalStatus" data-value="0.32" onclick="selectOption('maritalStatus', 0.32)">Widowed</button>
-                    <input type="hidden" id="maritalStatus" value="">
-                </div>
-                <div class="label-group">
-                    <label for="asaScore">ASA Score:</label>
-                    <input type="number" id="asaScore" class="form-control">
+                    <input type="hidden" id="maritalStatus" value="0">
                 </div>
             </div>
             <div class="form-group">
                 <div class="label-group">
                     <label>Exercise:</label>
-                    <button type="button" class="btn option" data-field="exercise" data-value="0" onclick="selectOption('exercise', 0)">No</button>
+                    <button type="button" class="btn option selected" data-field="exercise" data-value="0" onclick="selectOption('exercise', 0)">No</button>
                     <button type="button" class="btn option" data-field="exercise" data-value="1.81" onclick="selectOption('exercise', 1.81)">Yes</button>
-                    <input type="hidden" id="exercise" value="">
+                    <input type="hidden" id="exercise" value="0">
                 </div>
                 <div class="label-group">
                     <label>Admitted to Hospital:</label>
-                    <button type="button" class="btn option" data-field="hospitalAdmission" data-value="0" onclick="selectOption('hospitalAdmission', 0)">No</button>
+                    <button type="button" class="btn option selected" data-field="hospitalAdmission" data-value="0" onclick="selectOption('hospitalAdmission', 0)">No</button>
                     <button type="button" class="btn option" data-field="hospitalAdmission" data-value="-0.53" onclick="selectOption('hospitalAdmission', -0.53)">Yes</button>
-                    <input type="hidden" id="hospitalAdmission" value="">
+                    <input type="hidden" id="hospitalAdmission" value="0">
                 </div>
             </div>
             <div class="form-group">
                 <div class="label-group">
                     <label>Transportation:</label>
-                    <button type="button" class="btn option" data-field="transportation" data-value="0" onclick="selectOption('transportation', 0)">No</button>
+                    <button type="button" class="btn option selected" data-field="transportation" data-value="0" onclick="selectOption('transportation', 0)">No</button>
                     <button type="button" class="btn option" data-field="transportation" data-value="1.14" onclick="selectOption('transportation', 1.14)">Yes</button>
-                    <input type="hidden" id="transportation" value="">
+                    <input type="hidden" id="transportation" value="0">
                 </div>
             </div>
             <button type="button" class="btn submit" onclick="calculateSuccess()">Calculate</button>
