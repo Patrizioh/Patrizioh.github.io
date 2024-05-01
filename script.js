@@ -1,3 +1,15 @@
+function selectOption(fieldId, value) {
+    document.getElementById(fieldId).value = value;
+    let buttons = document.querySelectorAll(`.option[data-field='${fieldId}']`);
+    buttons.forEach(button => {
+        if(button.getAttribute('data-value') === value.toString()) {
+            button.classList.add('selected');
+        } else {
+            button.classList.remove('selected');
+        }
+    });
+}
+
 function calculateSuccess() {
     const intercept = 6.68;
     const surgeryType = parseFloat(document.getElementById('surgeryType').value);

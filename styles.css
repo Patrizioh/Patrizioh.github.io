@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full vertical coverage */
+}
+
+.container {
+    background: white;
+    padding: 30px; /* Increased padding for a more spacious look */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 700px; /* Adjusted width for better layout */
+    overflow: auto; /* Ensure content fits within the container */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increase bottom margin for better spacing */
+    display: flex; /* Flex layout to align items in rows */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    align-items: center; /* Center-align the form elements */
+}
+
+.label-group {
+    flex: 50%; /* Assign half of the container width to each label group */
+    min-width: 250px; /* Minimum width for responsiveness */
+    padding: 10px; /* Padding around each group for better spacing */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-control, .btn, .option {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+}
+
+.btn, .option {
+    color: #333; /* Dark grey for text */
+    background-color: #e7e7e7; /* Light grey background for buttons */
+    border: none;
+}
+
+.btn:hover, .option:not(.selected):hover {
+    background-color: #d0d0d0; /* Slightly darker grey on hover */
+}
+
+.selected, .selected:hover {
+    background-color: #0056b3; /* Blue for selected and hover on selected */
+    color: white;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+    border-radius: 4px;
+    text-align: center;
+}
