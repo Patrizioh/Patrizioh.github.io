@@ -36,10 +36,15 @@ function calculateSuccess() {
     const probability = 1 / (1 + Math.exp(-logOdds));
 
     const resultElement = document.getElementById('result');
-    resultElement.innerText = 'Probability of Success: ' + (probability * 100).toFixed(2) + '%';
-    if (probability >= 0.8) {
-        resultElement.style.backgroundColor = '#d1e7dd'; // Green for outpatient
-    } else {
+    if (probability < 0.8) {
+        resultElement.innerHTML = '<strong>Recommended: Inpatient</strong><br>' +
+                                  'Probability of Success: ' + (probability * 100).toFixed(2) + '%';
         resultElement.style.backgroundColor = '#f8d7da'; // Red for inpatient
+        resultElement.style.color = '#721c24'; // Darker text for better readability
+    } else {
+        resultElement.innerHTML = '<strong>Recommended: Outpatient</strong><br>' +
+                                  'Probability of Success: ' + (probability * 100).toFixed(2) + '%';
+        resultElement.style.backgroundColor = '#d1e7dd'; // Green for outpatient
+        resultElement.style.color = '#0f5132'; // Darker text for better readability
     }
 }
