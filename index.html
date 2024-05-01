@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>Same Day Surgery Success Predictor</h1>
-            <p class="subtitle">Use this calculator to predict the success rate of same-day surgery based on various patient factors.</p>
+            <h1>Social Determinant Calculator for Same-Day Total Joint Discharge</h1>
+            <p class="subtitle">Predictive same day surgery calculator for total joint arthroplasty utilizing demographics and social factors.</p>
         </header>
         <form id="surgeryForm">
             <div class="form-group">
@@ -64,7 +64,7 @@
                     <input type="hidden" id="exercise" value="0">
                 </div>
                 <div class="label-group">
-                    <label>Admitted to Hospital:</label>
+                    <label>Admitted to ER within Last 12 Months:</label>
                     <button type="button" class="btn option selected" data-field="hospitalAdmission" data-value="0" onclick="selectOption('hospitalAdmission', 0)">No</button>
                     <button type="button" class="btn option" data-field="hospitalAdmission" data-value="-0.53" onclick="selectOption('hospitalAdmission', -0.53)">Yes</button>
                     <input type="hidden" id="hospitalAdmission" value="0">
@@ -72,7 +72,7 @@
             </div>
             <div class="form-group">
                 <div class="label-group">
-                    <label>Transportation:</label>
+                    <label>Transportation Access:</label>
                     <button type="button" class="btn option selected" data-field="transportation" data-value="0" onclick="selectOption('transportation', 0)">No</button>
                     <button type="button" class="btn option" data-field="transportation" data-value="1.14" onclick="selectOption('transportation', 1.14)">Yes</button>
                     <input type="hidden" id="transportation" value="0">
@@ -81,8 +81,9 @@
                   <div id="result" class="result"></div>
         </form>
 	<footer>
-            <p>Authors: Dr. Jane Doe, Dr. John Smith</p>
-            <button class="manuscript-button"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Patrizio+HA&cauthor_id=37310398" target="_blank">View Final Manuscript</a></button>
+            <p>Authors: Rex Lutz DO, Danielle Ponzio MD, Harrison A. Patrizio BS, Hope Thalody DO, Miranda Czymek BS, Zachary Post MD, Michael Ast MD, Zachary Post MD, Alvin Ong MD
+</p>
+            <button class="manuscript-button"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Patrizio+HA&cauthor_id=37310398" target="_blank">More Information</a></button>
         </footer>
     </div>
     <script src="script.js"></script>

@@ -25,6 +25,7 @@ body {
 header h1 {
     text-align: center;
     color: #333;
+    font-size: 22px; /* Adjust the font size as needed */
 }
 
 .subtitle {
@@ -97,6 +98,7 @@ label {
 footer {
     margin-top: 20px;
     text-align: center;
+    font-size: 12px; /* Adjust the font size as needed */
     width: 100%; /* Full width */
 }
 
