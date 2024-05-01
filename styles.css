@@ -44,7 +44,7 @@ header h1 {
 
 .label-group {
     flex: 1 1 45%; /* Each group takes up 45% to fit two per row */
-    min-width: 300px; /* Minimum width for each group */
+    min-width: 250px; /* Adjusted minimum width for better mobile responsiveness */
     padding: 5px; /* Minimal padding to reduce bulk */
 }
 
@@ -108,7 +108,7 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 14px; /* Adjust if needed */
     text-align: center;
 }
 
