@@ -77,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleButton(this, [document.getElementById("stories-1"), document.getElementById("stories-2")], () => { stories = 3; });
     });
     
+    document.getElementById("stories-3").addEventListener("click", function() {
+        toggleButton(this, [document.getElementById("stories-1"), document.getElementById("stories-2")], () => { stories = 4; });
+    });
+    
     // Add event listener to Reset button
     document.getElementById("reset").addEventListener("click", function() {
         document.querySelectorAll(".btn").forEach((btn) => {
