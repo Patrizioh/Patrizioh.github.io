@@ -17,6 +17,21 @@ body {
     width: 90%;
     max-width: 800px; /* Increased width to accommodate two columns */
     overflow: hidden; /* No overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: -10px;
+    font-size: 14px;
+    color: #555;
 }
 
 .form-group {
@@ -24,6 +39,7 @@ body {
     flex-wrap: wrap; /* Allow wrapping */
     justify-content: space-between; /* Space out elements */
     margin-bottom: 15px; /* Tighter margins to reduce scrolling */
+    width: 100%; /* Ensure full width */
 }
 
 .label-group {
@@ -41,7 +57,7 @@ label {
 
 .form-control, .btn, .option {
     width: 100%;
-    padding: 8px; /* Slightly reduced padding */
+    padding: 8px;
     margin-top: 5px;
     border-radius: 4px;
     cursor: pointer;
@@ -75,4 +91,37 @@ label {
     border: 1px solid #badbcc;
     border-radius: 4px;
     text-align: center;
+    width: 100%; /* Full width for visibility */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Full width */
+}
+
+.manuscript-button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.manuscript-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.manuscript-button:hover {
+    background-color: #0056b3;
+}
+
+/* Prevent zooming on mobile devices */
+input, button {
+    font-size: 16px; /* Ensures text size is large enough to prevent zoom on mobile */
 }
