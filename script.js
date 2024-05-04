@@ -21,13 +21,13 @@ function selectOption(fieldId, value) {
 }
 
 function calculateSuccess() {
-    const intercept = 6.68;
+    const intercept = 6.717;
     const surgeryType = parseFloat(document.getElementById('surgeryType').value);
     const sex = parseFloat(document.getElementById('sex').value);
-    const age = parseFloat(document.getElementById('age').value) * -0.08;
+    const age = parseFloat(document.getElementById('age').value) * -0.078;
     const race = parseFloat(document.getElementById('race').value);
     const maritalStatus = parseFloat(document.getElementById('maritalStatus').value);
-    const asaScore = parseFloat(document.getElementById('asaScore').value) * -1.53;
+    const asaScore = parseFloat(document.getElementById('asaScore').value) * -1.609;
     const exercise = parseFloat(document.getElementById('exercise').value);
     const hospitalAdmission = parseFloat(document.getElementById('hospitalAdmission').value);
     const transportation = parseFloat(document.getElementById('transportation').value);
