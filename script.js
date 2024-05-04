@@ -37,11 +37,11 @@ function calculateSuccess() {
 
     const resultElement = document.getElementById('result');
     if (probability < 0.28) {
-        resultElement.innerHTML = '<strong>Recommended: Inpatient</strong><br>';
+        resultElement.innerHTML = '<strong>Recommendation: Inpatient</strong><br>';
         resultElement.style.backgroundColor = '#f8d7da'; // Red for inpatient
         resultElement.style.color = '#721c24'; // Darker text for better readability
     } else {
-        resultElement.innerHTML = '<strong>Recommended: Outpatient</strong><br>';
+        resultElement.innerHTML = '<strong>Recommendation: Outpatient</strong><br>';
         resultElement.style.backgroundColor = '#d1e7dd'; // Green for outpatient
         resultElement.style.color = '#0f5132'; // Darker text for better readability
     }
