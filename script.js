@@ -36,7 +36,7 @@ function calculateSuccess() {
     const probability = 1 / (1 + Math.exp(-logOdds));
 
     const resultElement = document.getElementById('result');
-    if (probability < 0.28) {
+    if (probability < 0.7) {
         resultElement.innerHTML = '<strong>Recommendation: Inpatient</strong><br>';
         resultElement.style.backgroundColor = '#f8d7da'; // Red for inpatient
         resultElement.style.color = '#721c24'; // Darker text for better readability
